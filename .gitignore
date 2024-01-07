@@ -1,5 +1,5 @@
 # Ignore hardware specific configuration
-hardware-configuration.nix
+# hardware-configuration.nix
 
 # Ignore any secret files
 *.secret
