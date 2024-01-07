@@ -1,0 +1,11 @@
+# Ignore hardware specific configuration
+hardware-configuration.nix
+
+# Ignore any secret files
+*.secret
+
+# Ignore backup files
+*~
+
+# Ignore swap files created by vim
+.*.swp
