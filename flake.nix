@@ -4,13 +4,14 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    neovim-minimal-flake.url = "path:/home/kit/Documents/flakes/neovim-minimal";  # Adjust the path as necessary
+    # home-manager = {
+     #  url = "github:nix-community/home-manager";
+     #  inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { self, nixpkgs,neovim-minimal-flake, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -20,8 +21,8 @@
       nixosConfigurations.default = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [ 
-            ./hosts/default/configuration.nix
-            inputs.home-manager.nixosModules.default
+                ./hosts/default/configuration.nix
+                #neovim-minimal-flake.packages.x86_64-linux.customNeovim
           ];
         };
 
