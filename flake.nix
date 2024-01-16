@@ -5,7 +5,10 @@
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    neovim-minimal-flake.url = "path:/home/kit/Documents/flakes/neovim-minimal";
+    neovim-minimal-flake = {
+      url = "github:jutskitting/nvim-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
@@ -15,6 +18,13 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
+      devShells.${system} = nixpkgs.legacyPackages.${system}.mkShell {
+        buildInputs = [
+          neovim-minimal-flake.packages.${system}.default
+          self.pkgs.hello
+        ];
+      };
+
     
       nixosConfigurations.default = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};

@@ -3,10 +3,6 @@
 
 { config, lib, pkgs, inputs, ... }:
 let
-    # Define the custom NeoVim package using nvim.nix
-    customNvim = pkgs.callPackage ../../modules/nixos/nvim.nix { 
-    #vim = pkgs.neovim;
-  };
 in
 {
     imports =
