@@ -2,13 +2,11 @@
   description = "Nixos config flake";
 
   inputs = {
+
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    neovim-minimal-flake.url = "path:/home/kit/Documents/flakes/neovim-minimal";  # Adjust the path as necessary
-    # home-manager = {
-     #  url = "github:nix-community/home-manager";
-     #  inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    neovim-minimal-flake.url = "path:/home/kit/Documents/flakes/neovim-minimal";
+
   };
 
   outputs = { self, nixpkgs,neovim-minimal-flake, ... }@inputs:

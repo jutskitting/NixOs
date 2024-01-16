@@ -67,8 +67,9 @@ in
             swaybg
             foot
           ];
-          environment.etc."sway/config".source = lib.mkForce (pkgs.callPackage ./swayConfig.nix {});
     };
+
+    environment.etc."sway/config".source = lib.mkForce (pkgs.callPackage ../modules/nixos/swayConfig.nix {});
 
     environment.systemPackages = with pkgs; [
         wget
