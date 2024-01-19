@@ -19,7 +19,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": [
-          "neovim-nix",
+          "neovim-minimal",
           "nixpkgs"
         ]
       },
@@ -40,7 +40,7 @@
         "type": "github"
       }
     },
-    "neovim-nix": {
+    "neovim-minimal": {
       "inputs": {
         "neovim": "neovim",
         "nixpkgs": [
@@ -79,7 +79,7 @@
     },
     "root": {
       "inputs": {
-        "neovim-nix": "neovim-nix",
+        "neovim-minimal": "neovim-minimal",
         "nixpkgs": "nixpkgs"
       }
     }

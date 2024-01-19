@@ -5,28 +5,31 @@
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    neovim-nix= {
+    neovim-minimal= {
       url = "github:jutskitting/nvim-minimal";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
   };
 
-  outputs = { self, nixpkgs,neovim-nix, ... }@inputs:
+  outputs = { self, nixpkgs,neovim-minimal, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
 
-      devShells.${system} = nixpkgs.legacyPackages.${system}.mkShell {
+      devShells.${system}.default = nixpkgs.legacyPackages.${system}.mkShell {
         buildInputs = [
-          self.pkgs.hello
-          neovim-nix.packages.${system}.default
+          pkgs.hello
+          neovim-minimal.packages.${system}.default
         ];
+         shellHook = ''
+            echo "PATH: $PATH"
+            which nvim || echo "nvim not found in PATH"
+          '';
       };
 
-    
       nixosConfigurations.default = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [ 

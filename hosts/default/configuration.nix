@@ -29,6 +29,7 @@ in
     environment.interactiveShellInit = ''
         alias setbg='swaymsg output "*" bg /home/kit/Documents/images/2.png fill'
         alias rebuild='sudo nixos-rebuild switch --flake /etc/nixos#default'
+        alias rustdev='nix develop github:jutskitting/rust-dev-flake'
     '';
 
     # Enable CUPS to print documents.
@@ -66,7 +67,7 @@ in
           ];
     };
 
-    environment.etc."sway/config".source = lib.mkForce (pkgs.callPackage ../../modules/nixos/swayConfig.nix {});
+    environment.etc."sway/config".source = lib.mkForce (pkgs.callPackage ../../modules/nixos/sway.nix {});
 
     environment.systemPackages = with pkgs; [
         wget
@@ -76,6 +77,15 @@ in
         brave
         ueberzugpp
     ];
+
+  system.userActivationScripts = {
+   extraUserActivation = {
+       text = ''
+        ln -sfn /etc/nixos/modules/nixos/alacritty.nix ~/.config/
+      '';
+      deps = [];
+    };
+  };
 
     # Some programs need SUID wrappers, can be configured further or are
          
