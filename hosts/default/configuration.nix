@@ -27,7 +27,8 @@ in
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
     environment.interactiveShellInit = ''
-        # alias bg = ' swaymsg output "*" bg /home/kit/Documents/images/biotjff07cwb1.png fill '
+        alias setbg='swaymsg output "*" bg /home/kit/Documents/images/2.png fill'
+        alias rebuild='sudo nixos-rebuild switch --flake /etc/nixos#default'
     '';
 
     # Enable CUPS to print documents.

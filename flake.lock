@@ -19,7 +19,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": [
-          "neovim-minimal-flake",
+          "neovim-nix",
           "nixpkgs"
         ]
       },
@@ -40,7 +40,7 @@
         "type": "github"
       }
     },
-    "neovim-minimal-flake": {
+    "neovim-nix": {
       "inputs": {
         "neovim": "neovim",
         "nixpkgs": [
@@ -48,16 +48,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1705150292,
-        "narHash": "sha256-iNQsRCBhSPV2AJ2FwxN0p+MOw9bqoKktA9U8Q31rMaE=",
+        "lastModified": 1705454049,
+        "narHash": "sha256-P2j6LkFTmoyoUv1xK0v/jKci+spnGtcH5+fMlj9E2LM=",
         "owner": "jutskitting",
-        "repo": "nvim-nix",
-        "rev": "5dce0976fb23254325d88eedf6e22b9d6c9aab11",
+        "repo": "nvim-minimal",
+        "rev": "dc65b084aea2d39a796ae70ddfb76dcb49bb1286",
         "type": "github"
       },
       "original": {
         "owner": "jutskitting",
-        "repo": "nvim-nix",
+        "repo": "nvim-minimal",
         "type": "github"
       }
     },
@@ -79,7 +79,7 @@
     },
     "root": {
       "inputs": {
-        "neovim-minimal-flake": "neovim-minimal-flake",
+        "neovim-nix": "neovim-nix",
         "nixpkgs": "nixpkgs"
       }
     }
