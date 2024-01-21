@@ -30,16 +30,7 @@ in
         alias setbg='swaymsg output "*" bg /home/kit/Documents/images/2.png fill'
         alias rebuild='sudo nixos-rebuild switch --flake /etc/nixos#default'
         alias rustdev='nix develop github:jutskitting/rust-dev-flake'
-        # Function to exit all nested shells
-        function exit_all {
-            if [ "$SHLVL" -gt 1 ]; then
-                exit $(($SHLVL - 1))
-            else
-                echo "Already in the top-level shell."
-            fi
-        }
-        alias recexit='exit_all'
-        alias neovim='nvim'
+        export EDITOR=nvim
     '';
 
     # Enable CUPS to print documents.
