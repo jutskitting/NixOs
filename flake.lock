@@ -15,6 +15,43 @@
         "type": "github"
       }
     },
+    "mc": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1705781340,
+        "narHash": "sha256-Ii8Z/c9+1eXcSTuZIJBlK9kx81dRxJX4abfYKk/ZgdU=",
+        "owner": "MidnightCommander",
+        "repo": "mc",
+        "rev": "953c10134767853a39e95caf9b04c7431f65d0e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MidnightCommander",
+        "repo": "mc",
+        "type": "github"
+      }
+    },
+    "mc-flake": {
+      "inputs": {
+        "mc": "mc",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1705814907,
+        "narHash": "sha256-4u7Bz/0eM2AJnLMVLpAYWzCqjfyVXnM6JYX4T24MGwE=",
+        "owner": "jutskitting",
+        "repo": "midnight-commander-flake",
+        "rev": "8015318da3305fe16f482eccb0acb8b39056b9f9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jutskitting",
+        "repo": "midnight-commander-flake",
+        "type": "github"
+      }
+    },
     "neovim": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -79,6 +116,7 @@
     },
     "root": {
       "inputs": {
+        "mc-flake": "mc-flake",
         "neovim-minimal": "neovim-minimal",
         "nixpkgs": "nixpkgs"
       }
