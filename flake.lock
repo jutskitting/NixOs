@@ -39,11 +39,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1705849292,
-        "narHash": "sha256-sdcjZNwfQ+4nCm5XzSZEl0AYAwDTh3RpeDgF2oRjlb4=",
+        "lastModified": 1705885892,
+        "narHash": "sha256-THGBfv0MTrPtlatEYJTct4Pr1ZxR+ailJnJ/L9vL8Lw=",
         "owner": "jutskitting",
         "repo": "midnight-commander-flake",
-        "rev": "ae6a8e184d0f058378b5c5178731e17a802de5a2",
+        "rev": "05d558dd69fa5844a4d0aeeacae1c7ceb8bc00d2",
         "type": "github"
       },
       "original": {
@@ -85,11 +85,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1705454049,
-        "narHash": "sha256-P2j6LkFTmoyoUv1xK0v/jKci+spnGtcH5+fMlj9E2LM=",
+        "lastModified": 1705849621,
+        "narHash": "sha256-deDHb3iJeFx9LwCVApoMnEoC3ushUWdCbhKQ8PCnEFI=",
         "owner": "jutskitting",
         "repo": "nvim-minimal",
-        "rev": "dc65b084aea2d39a796ae70ddfb76dcb49bb1286",
+        "rev": "71e1800e4ad316d12d49c7e51140de567df84acf",
         "type": "github"
       },
       "original": {
