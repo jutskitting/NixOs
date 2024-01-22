@@ -39,11 +39,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1705814907,
-        "narHash": "sha256-4u7Bz/0eM2AJnLMVLpAYWzCqjfyVXnM6JYX4T24MGwE=",
+        "lastModified": 1705849292,
+        "narHash": "sha256-sdcjZNwfQ+4nCm5XzSZEl0AYAwDTh3RpeDgF2oRjlb4=",
         "owner": "jutskitting",
         "repo": "midnight-commander-flake",
-        "rev": "8015318da3305fe16f482eccb0acb8b39056b9f9",
+        "rev": "ae6a8e184d0f058378b5c5178731e17a802de5a2",
         "type": "github"
       },
       "original": {
@@ -100,11 +100,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1704194953,
-        "narHash": "sha256-RtDKd8Mynhe5CFnVT8s0/0yqtWFMM9LmCzXv/YKxnq4=",
+        "lastModified": 1705677747,
+        "narHash": "sha256-eyM3okYtMgYDgmYukoUzrmuoY4xl4FUujnsv/P6I/zI=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "bd645e8668ec6612439a9ee7e71f7eac4099d4f6",
+        "rev": "bbe7d8f876fbbe7c959c90ba2ae2852220573261",
         "type": "github"
       },
       "original": {

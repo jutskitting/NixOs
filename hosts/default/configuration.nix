@@ -30,6 +30,8 @@ in
         alias setbg='swaymsg output "*" bg /home/kit/Documents/images/2.png fill'
         alias rebuild='sudo nixos-rebuild switch --flake /etc/nixos#default'
         alias rustdev='nix develop github:jutskitting/rust-dev-flake'
+        alias nixdev='nix shell github:jutskitting/nvim-nix'
+        alias salesforcedev='nix develop github:jutskitting/salesforce-dev-flake'
         export EDITOR=nvim
     '';
 
