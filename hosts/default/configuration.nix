@@ -77,18 +77,15 @@ in
         git
         wl-clipboard
         brave
-        alacritty
         lf
     ];
 
-    system.userActivationScripts = {
-     extraUserActivation = {
-         text = ''
-          ln -sfn /etc/nixos/modules/nixos/alacritty.nix ~/.config/
-        '';
-        deps = [];
-      };
-    };
+    # system.userActivationScripts = {
+    #  extraUserActivation = {
+    #      text = '' '';
+    #     deps = [];
+    #   };
+    # };
 
     # Some programs need SUID wrappers, can be configured further or are
          

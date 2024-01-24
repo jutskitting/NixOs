@@ -1,9 +1,8 @@
-{ }:''
 env:
   TERM: screen-256color
 
 window:
-  opacity: 1.0
+  opacity: 0.8
   dimensions:
     columns: 0
     lines: 0
@@ -38,7 +37,7 @@ debug.render_timer: false
 colors:
   # Default colors
   primary:
-    background: '0x181818'
+    background: '0x000000'
     foreground: '0xd8d8d8'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
@@ -50,7 +49,7 @@ colors:
 
   # Normal colors
   normal:
-    black:   '0x181818'
+    black:   '0x000000'
     red:     '0xab4642'
     green:   '0xa1b56c'
     yellow:  '0xf7ca88'
@@ -94,5 +93,3 @@ window.dynamic_title: true
 
 
 live_config_reload: true
-
-''
