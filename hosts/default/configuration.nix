@@ -31,8 +31,11 @@ in
         alias rebuild='sudo nixos-rebuild switch --flake /etc/nixos#default'
         alias rustdev='nix develop github:jutskitting/rust-dev-flake'
         alias nixdev='nix shell github:jutskitting/nvim-nix'
-        alias salesforcedev='nix develop github:jutskitting/salesforce-dev-flake'
+        alias sfdev='nix develop github:jutskitting/salesforce-dev-flake'
+        alias lg='lazygit'
+        alias tw='taskwarrior-tui'
         export EDITOR=nvim
+        export BROWSER=brave
     '';
 
     # Enable CUPS to print documents.
@@ -55,6 +58,11 @@ in
         packages = with pkgs; [
             brave
             ueberzugpp
+            lazygit
+            neofetch
+            tmux
+            taskwarrior
+            taskwarrior-tui
         ];
     };
 
@@ -106,6 +114,11 @@ in
         dates = "weekly";
         options = "--delete-older-than 7d";
     };
+
+    services.logind.extraConfig = ''
+        IdleAction=suspend
+        IdleActionSec=10min
+    '';
 
 
     # List services that you want to enable:
