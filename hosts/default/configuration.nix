@@ -3,12 +3,23 @@
 
 { config, lib, pkgs, inputs, ... }:
 let
+    shellInit = ''
+        alias rebuild='sudo nixos-rebuild switch --flake /etc/nixos#default'
+        alias rustdev='nix develop path:/home/kit/Documents/flakes/rust-dev-flake'
+        alias nixdev='nix shell path:home/kit/Documents/flakes/neovim-nix'
+        alias sfdev='nix develop path:/home/kit/Documents/flakes/neovim-salesforce'
+        alias lg='lazygit'
+        export EDITOR=nvim
+        export BROWSER=brave
+    '';
 in
 {
     imports =
     [
         ./hardware-configuration.nix
     ];
+
+    environment.interactiveShellInit = shellInit;
 
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
@@ -26,17 +37,6 @@ in
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-    environment.interactiveShellInit = ''
-        alias setbg='swaymsg output "*" bg /home/kit/Documents/images/2.png fill'
-        alias rebuild='sudo nixos-rebuild switch --flake /etc/nixos#default'
-        alias rustdev='nix develop github:jutskitting/rust-dev-flake'
-        alias nixdev='nix shell github:jutskitting/nvim-nix'
-        alias sfdev='nix develop github:jutskitting/salesforce-dev-flake'
-        alias lg='lazygit'
-        alias tw='taskwarrior-tui'
-        export EDITOR=nvim
-        export BROWSER=brave
-    '';
 
     # Enable CUPS to print documents.
     # services.printing.enable = true;
@@ -58,6 +58,7 @@ in
         packages = with pkgs; [
             brave
             ueberzugpp
+            zathura
             lazygit
             neofetch
             tmux
@@ -72,7 +73,7 @@ in
             rofi
             light
             swaylock
-            swaybg
+            swayidle
             foot
           ];
     };

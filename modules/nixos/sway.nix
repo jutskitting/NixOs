@@ -116,6 +116,12 @@ bar {
 
 exec autotiling
 
+exec swayidle -w \
+  timeout 300 'swaylock -f -c 000000' \
+  timeout 600 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+  before-sleep 'swaylock -f -c 000000'
+
 exec "/nix/store/yj1vp6pcb4izg73p4007ckyhak5icxbp-dbus-1.14.10/bin/dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_TYPE NIXOS_OZONE_WL; systemctl --user start sway-session.target"
 
 ''
