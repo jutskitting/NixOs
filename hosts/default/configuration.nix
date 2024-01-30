@@ -5,9 +5,6 @@
 let
     shellInit = ''
         alias rebuild='sudo nixos-rebuild switch --flake /etc/nixos#default'
-        alias rustdev='nix develop path:/home/kit/Documents/flakes/rust-dev-flake'
-        alias nixdev='nix shell path:home/kit/Documents/flakes/neovim-nix'
-        alias sfdev='nix develop path:/home/kit/Documents/flakes/neovim-salesforce'
         alias lg='lazygit'
         export EDITOR=nvim
         export BROWSER=brave
