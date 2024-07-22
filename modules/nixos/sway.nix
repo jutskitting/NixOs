@@ -114,6 +114,8 @@ bar {
 
 }
 
+seat seat0 hide_cursor 3000
+
 exec autotiling
 
 exec swayidle -w \

@@ -15,6 +15,7 @@ in
     [
         ./hardware-configuration.nix
     ];
+    hardware.opengl.enable = true;
 
     environment.interactiveShellInit = shellInit;
 
@@ -56,11 +57,16 @@ in
             brave
             ueberzugpp
             zathura
+            vlc
+            chromium
             lazygit
             neofetch
             tmux
+            zellij
             taskwarrior
             taskwarrior-tui
+            feh
+            jq
         ];
     };
 

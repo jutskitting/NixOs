@@ -17,17 +17,17 @@ draw_bold_text_with_bright_colors: true
 
 font:
   normal:
-    family: "Fira Code"
+    family: "DroidSansM"
     style: Retina
 
   # The bold font face
   bold:
-    family: "Fira Code"
+    family: "DroidSansM"
     style: Bold
 
   # The italic font face
   italic:
-    family: "Fira Code"
+    family: "DroidSansM"
   size: 8.0
 
 debug.render_timer: false

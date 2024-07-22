@@ -10,7 +10,8 @@
     };
 
     mc-flake = {
-      url = "github:jutskitting/midnight-commander-flake";
+      # url = "github:jutskitting/midnight-commander-flake";
+      url = "path:/home/kit/Documents/flakes/midnight-commander-flake";
     };
 
     alacritty-flake = {
@@ -18,7 +19,7 @@
     };
   };
 
-  outputs = { self, nixpkgs,neovim-minimal,mc-flake, alacritty-flake,... }@inputs:
+  outputs = { self,nixpkgs,neovim-minimal,mc-flake,alacritty-flake,... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
