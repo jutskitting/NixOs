@@ -17,17 +17,14 @@ draw_bold_text_with_bright_colors: true
 
 font:
   normal:
-    family: "DroidSansM"
-    style: Retina
-
-  # The bold font face
+    family: "FiraCode Nerd Font"
+    style: Light 
   bold:
-    family: "DroidSansM"
+    family: "FiraCode Nerd Font"
     style: Bold
-
-  # The italic font face
   italic:
-    family: "DroidSansM"
+    family: "FiraCode Nerd Font"
+    style: Light  # or Italic if available
   size: 8.0
 
 debug.render_timer: false
