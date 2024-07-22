@@ -54,6 +54,7 @@ in
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" ];
         packages = with pkgs; [
+            alacritty
             brave
             ueberzugpp
             zathura
@@ -123,18 +124,6 @@ in
         IdleAction=suspend
         IdleActionSec=10min
     '';
-
-    programs.alacritty = {
-      enable = true;
-      settings = {
-        font = {
-          normal.family = "FiraCode Nerd Font";
-          bold.family = "FiraCode Nerd Font";
-          italic.family = "FiraCode Nerd Font";
-          size = 10.0;
-        };
-      };
-    };
 
     # List services that you want to enable:
 
