@@ -15,18 +15,18 @@ decorations = "full"
 opacity = 1
 
 [font]
-size = 8.5
+size = 9.5
 
 [font.normal]
-family = "monospace"
+family = "DroidSansM Nerd Font"
 style = "Light"
 
 [font.bold]
-family = "monospace"
+family = "FiraCode Nerd Font Mono Light"
 style = "Bold"
 
 [font.italic]
-family = "monospace"
+family = "FreeMono"
 style = "Light"  # or "Italic" if available
 
 [colors.primary]
