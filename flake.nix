@@ -1,5 +1,6 @@
 {
   description = "Nixos config flake";
+  //ok
 
   inputs = {
 
